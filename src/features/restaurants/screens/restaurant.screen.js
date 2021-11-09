@@ -3,6 +3,14 @@ import { View, StyleSheet } from "react-native";
 import { Searchbar } from "react-native-paper";
 import { RestaurantInfo } from "../components/restaurant-info.component";
 
+import styled from "styled-components/native";
+
+const List = styled.View`
+  flex: 1;
+  background-color: blue;
+  padding: 12px;
+`;
+
 export const RestaurantScreen = () => {
   return (
     <>
@@ -13,19 +21,14 @@ export const RestaurantScreen = () => {
           placeholder="Search Restaurants"
         />
       </View>
-      <View style={styles.list}>
+      <List>
         <RestaurantInfo />
-      </View>
+      </List>
     </>
   );
 };
 
 const styles = StyleSheet.create({
-  list: {
-    flex: 1,
-    backgroundColor: "blue",
-    padding: 12,
-  },
   search: {
     padding: 12,
   },
